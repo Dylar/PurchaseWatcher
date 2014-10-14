@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+	<include 
+		android:id="@+id/brandNameSpinner"
+		android:layout_height="50dp"
+		android:layout_width="match_parent"
+		layout="@layout/spinner_with_edit_btn"/>
+
+	<EditText
+		android:id="@+id/productNameEditText"
+		android:layout_height="50dp"
+		android:layout_width="match_parent"
+		android:hint="Productname"
+	/>
+
+	<EditText
+		android:id="@+id/costEditText"
+		android:layout_height="50dp"
+		android:layout_width="match_parent"
+		android:hint="Cost in cent"
+		android:inputType="number"
+	/>
+	<include 
+		android:id="@+id/typeSpinner"
+		android:layout_height="50dp"
+		android:layout_width="match_parent"
+		layout="@layout/spinner_with_edit_btn"/>
+	
+	<include 
+		android:id="@+id/rankSpinner"
+		android:layout_height="50dp"
+		android:layout_width="match_parent"
+		layout="@layout/spinner_with_edit_btn"/>
+	
+	<Button 
+		android:id="@+id/okButton"
+		android:layout_height="50dp"
+		android:layout_width="match_parent"
+		android:text="Ok"
+	/>
+
+</LinearLayout>

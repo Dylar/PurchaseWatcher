@@ -8,6 +8,10 @@
 package de.lbl.purchasewatcher;
 
 public final class R {
+    public static final class array {
+        public static final int thingy_rank_array=0x7f060001;
+        public static final int thingy_type_array=0x7f060000;
+    }
     public static final class attr {
     }
     public static final class dimen {
@@ -33,21 +37,33 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_example=0x7f080005;
-        public static final int action_settings=0x7f080004;
-        public static final int container=0x7f080001;
-        public static final int drawer_layout=0x7f080000;
-        public static final int navigation_drawer=0x7f080002;
-        public static final int section_label=0x7f080003;
+        public static final int action_example=0x7f09000e;
+        public static final int action_settings=0x7f09000d;
+        public static final int brandNameSpinner=0x7f090005;
+        public static final int container=0x7f090001;
+        public static final int costEditText=0x7f090007;
+        public static final int drawer_layout=0x7f090000;
+        public static final int editBtn=0x7f09000c;
+        public static final int main_container=0x7f090004;
+        public static final int navigation_drawer=0x7f090002;
+        public static final int okButton=0x7f09000a;
+        public static final int productNameEditText=0x7f090006;
+        public static final int rankSpinner=0x7f090009;
+        public static final int section_label=0x7f090003;
+        public static final int spinner=0x7f09000b;
+        public static final int typeSpinner=0x7f090008;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int fragment_main=0x7f030001;
         public static final int fragment_navigation_drawer=0x7f030002;
+        public static final int fragment_purchase_view=0x7f030003;
+        public static final int fragment_thingy_editor=0x7f030004;
+        public static final int spinner_with_edit_btn=0x7f030005;
     }
     public static final class menu {
-        public static final int global=0x7f070000;
-        public static final int main=0x7f070001;
+        public static final int global=0x7f080000;
+        public static final int main=0x7f080001;
     }
     public static final class string {
         public static final int action_example=0x7f050006;
@@ -55,6 +71,8 @@ public final class R {
         public static final int app_name=0x7f050000;
         public static final int navigation_drawer_close=0x7f050005;
         public static final int navigation_drawer_open=0x7f050004;
+        public static final int thingyRank=0x7f050009;
+        public static final int thingyType=0x7f050008;
         public static final int title_section1=0x7f050001;
         public static final int title_section2=0x7f050002;
         public static final int title_section3=0x7f050003;
@@ -81,10 +99,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static final int AppTheme=0x7f070001;
     }
 }

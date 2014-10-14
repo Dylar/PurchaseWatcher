@@ -10,4 +10,26 @@
     <string name="action_example">Example action</string>
     <string name="action_settings">Settings</string>
 
+	<string name="thingyType">Thingy type</string>
+
+	<string name="thingyRank">Thingy rank</string>
+	
+    <string-array name="thingy_type_array">
+		<item>Product Type</item>
+		<item>Food</item>
+        <item>Liquid</item>
+        <item>Cosmetica</item>
+        <item>Toy</item>
+        <item>Everyday</item>
+    </string-array>
+	
+	<string-array name="thingy_rank_array">
+		<item>Neediness</item>
+		<item>Need</item>
+        <item>Normal</item>
+        <item>Luxury</item>
+    </string-array>
+
+	
+	
 </resources>
