@@ -6,7 +6,10 @@ import android.content.ContentValues;
  * Interface for resources that can be stored inside the {@link Database}.
  *
  */
-public interface Storeable {
+public interface Storeable
+{
+
+	public static final String VAR_ID = "id";
 	/**
 	 * Returns the resource's id within the internal databse.
 	 *

@@ -16,13 +16,14 @@ public class PurchaseFactory<T extends Storeable> implements StoreableFactory
 		p.setDatabaseId(c.getInt(c.getColumnIndex(Purchase.VAR_ID)));
 		
 		//p.date = TODO
+		
 		try
 		{
-			String d = c.getString(c.getColumnIndex(Purchase.VAR_DATE));
-			p.date = SimpleDateFormat.getInstance().parse(d);
-			
-			JSONObject ja = new JSONObject(c.getString(c.getColumnIndex(Purchase.VAR_THINGYS)));
-			Log.i("PurchaseFactory", ja.toString());
+			long d = c.getLong(c.getColumnIndex(Purchase.VAR_DATE));
+			p.date = Calendar.getInstance();
+			p.date.setTime(new Date(d));
+			//JSONObject ja = new JSONObject(c.getString(c.getColumnIndex(Purchase.VAR_THINGYS)));
+			//Log.i("PurchaseFactory", ja.toString());
 		}
 		catch (Exception e)
 		{

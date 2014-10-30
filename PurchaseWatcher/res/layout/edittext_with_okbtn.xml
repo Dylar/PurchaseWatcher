@@ -2,18 +2,18 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="horizontal">
-    
-	<Spinner
-		android:id="@+id/spinner"
+
+	<EditText
+		android:id="@+id/edittext"
         android:layout_width="0px"
 		android:layout_weight="80"
         android:layout_height="match_parent"
 	/>
 
-<Button 
-	android:id="@+id/editBtn"
-	android:text="Edit"
-	android:layout_height="match_parent"
-	android:layout_width="0px"
-	android:layout_weight="20"/>
+	<Button 
+		android:id="@+id/okBtn"
+		android:text="Edit"
+		android:layout_height="match_parent"
+		android:layout_width="0px"
+		android:layout_weight="20"/>
 </LinearLayout>

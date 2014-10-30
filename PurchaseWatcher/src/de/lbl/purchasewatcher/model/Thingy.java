@@ -1,14 +1,14 @@
 package de.lbl.purchasewatcher.model;
 
-import de.lbl.purchasewatcher.system.*;
 import android.content.*;
+import de.lbl.purchasewatcher.system.*;
 
 public class Thingy implements Storeable
 {
 
 	public static final String TABLE = "thingys";
 	
-	public static final String VAR_ID = "id";
+	//public static final String VAR_ID = "id";
 	public static final String VAR_COST = "cost";
 	public static final String VAR_PRODUCTNAME = "productname";
 	public static final String VAR_BRANDNAME = "brandname";
@@ -68,10 +68,11 @@ public class Thingy implements Storeable
 
 		cvs.put(VAR_BRANDNAME, brandname);
 		cvs.put(VAR_PRODUCTNAME, productname);
-		cvs.put(VAR_ID, getDatabaseId());
+		//cvs.put(VAR_ID, getDatabaseId());
 		cvs.put(VAR_TYPE, type);
 		cvs.put(VAR_RANK, rank);
 		cvs.put(VAR_COST, cost);
+		cvs.put(VAR_PURCHASE_ID,purchase_id);
 		
 		return cvs;
 	}

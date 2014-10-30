@@ -8,14 +8,21 @@ import java.util.*;
 import android.view.View.*;
 import android.os.*;
 
-public class PurchaseOverviewAdapter extends BaseAdapter
+public class PurchaseOverviewAdapter extends PurchaseViewAdapter
 {
 	List<Purchase> list;
 	AbsListView.LayoutParams params;
+	List<Integer> filter;
 	
 	public PurchaseOverviewAdapter(List<Integer> filter){
+		this.filter = filter;
 		list = SystemController.dataHandler.getAllPurchase(filter);
-		params = new AbsListView.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 100);
+		params = new AbsListView.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, 175);
+	}
+	
+	public void update(){
+		list = SystemController.dataHandler.getAllPurchase(filter);
+		notifyDataSetChanged();
 	}
 
 	@Override
@@ -45,7 +52,7 @@ public class PurchaseOverviewAdapter extends BaseAdapter
 		if(contentView == null){
 			v = new TextView(App.context); //LayoutInflater.from(App.context).inflate(R.
 			v.setLayoutParams(params);
-			v.setTextSize(16);
+			v.setTextSize(18);
 			v.setGravity(Gravity.CENTER_VERTICAL);
 			v.setTextColor(App.context.getResources().getColor(android.R.color.holo_red_dark));
 		}
@@ -58,6 +65,7 @@ public class PurchaseOverviewAdapter extends BaseAdapter
 				@Override
 				public void onClick(View v)
 				{
+					//App.debug("p "+p.id);
 					Bundle b = new Bundle();
 					b.putString(Constants.KEY_VIEW_NAME, Constants.VIEW_PURCHASE);
 					b.putString(Constants.KEY_VIEW_MODE,Constants.MODE_DETAIL);

@@ -9,6 +9,44 @@ import java.util.*;
 
 public class ThingyViewFragment extends MainViewFragment
 {
+
+	@Override
+	public void changeMode(Bundle data)
+	{
+//		String mode = data.getString(Constants.KEY_VIEW_MODE);
+//		if(!this.mode.equals(mode)){
+//			switch(mode){
+//				case Constants.MODE_OVERVIEW:
+//					adapt = new PurchaseOverviewAdapter(null);
+//					root.setAdapter(adapt);
+//					this.mode = mode;
+//					break;
+//				case Constants.MODE_DETAIL:
+//					setPurchase(data);
+//					adapt = new PurchaseDetailAdapter(purchase);
+//					root.setAdapter(adapt);
+//					this.mode = mode;
+//					break;
+//				case Constants.MODE_EDIT:
+//					break;
+//			}
+//			setTitle(mode);
+//		}
+	}
+
+
+	@Override
+	public void updateView()
+	{
+		
+	}
+
+	@Override
+	public void handleActionbarClick(MenuItem item)
+	{
+		// TODO: Implement this method
+	}
+
 	
 	View root;
 	EditText nameText;
@@ -53,11 +91,11 @@ public class ThingyViewFragment extends MainViewFragment
 
 	private void initLayout()
 	{
-		nameText = App.findView(root, R.id.productNameEditText);
-		costText = App.findView(root, R.id.costEditText);
+		nameText = (EditText) App.findView(root, R.id.productNameEditText);
+		costText = (EditText) App.findView(root, R.id.costEditText);
 		typeSpinner = App.findView(root, R.id.typeSpinner);
 		rankSpinner = App.findView(root, R.id.rankSpinner);
-		okBtn = App.findView(root, R.id.okButton);
+		okBtn = (Button) App.findView(root, R.id.okButton);
 
 
 	}

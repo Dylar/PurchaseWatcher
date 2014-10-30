@@ -3,11 +3,11 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-	<include 
+	<include
 		android:id="@+id/brandNameSpinner"
 		android:layout_height="50dp"
 		android:layout_width="match_parent"
-		layout="@layout/spinner_with_edit_btn"/>
+		layout="@layout/spinner_with_okbtn"/>
 
 	<EditText
 		android:id="@+id/productNameEditText"
@@ -27,13 +27,13 @@
 		android:id="@+id/typeSpinner"
 		android:layout_height="50dp"
 		android:layout_width="match_parent"
-		layout="@layout/spinner_with_edit_btn"/>
+		layout="@layout/spinner_with_okbtn"/>
 	
 	<include 
 		android:id="@+id/rankSpinner"
 		android:layout_height="50dp"
 		android:layout_width="match_parent"
-		layout="@layout/spinner_with_edit_btn"/>
+		layout="@layout/spinner_with_okbtn"/>
 	
 	<Button 
 		android:id="@+id/okButton"

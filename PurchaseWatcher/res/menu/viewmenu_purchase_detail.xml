@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item
+        android:id="@+id/create_thingy"
+        android:title="Create thingy"/>
+    <item
+        android:id="@+id/delete_purchase"
+        android:title="Delete Purchase"/>
+    
+</menu>

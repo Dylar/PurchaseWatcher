@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+	android:orientation="vertical"
+    android:layout_height="fill_parent">
+    
+	<include
+		android:id="@+id/date"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		layout="@layout/textview_with_okbtn"
+		/>
+	<TextView
+		android:id="@+id/show_thingy_btn"
+		android:textSize="18sp"
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		android:text="show thingy"
+	/>
+		
+</LinearLayout>

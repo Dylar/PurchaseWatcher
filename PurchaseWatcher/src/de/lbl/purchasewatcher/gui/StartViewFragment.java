@@ -8,6 +8,27 @@ public class StartViewFragment extends MainViewFragment
 {
 
 	@Override
+	public void changeMode(Bundle data)
+	{
+		// TODO: Implement this method
+	}
+
+
+	@Override
+	public void updateView()
+	{
+		// TODO: Implement this method
+	}
+
+
+	@Override
+	public void handleActionbarClick(MenuItem item)
+	{
+		gui.openDrawer();
+	}
+
+
+	@Override
 	public void setUpFragment(Bundle data)
 	{
 		name = data.getString(Constants.KEY_VIEW_NAME);
@@ -21,7 +42,5 @@ public class StartViewFragment extends MainViewFragment
 		v.setText("Hallo");
 		return v;
 	}
-	
-	
 
 }
