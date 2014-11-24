@@ -54,7 +54,8 @@ public class PurchaseDetailAdapter extends PurchaseViewAdapter implements OnClic
 				c.set(year,monthOfYear,dayOfMonth,0,0);
 				
 				SystemController.dataHandler.updatePurchase(p);
-				notifyDataSetChanged();
+				update();
+				
 			}
 		};
 
