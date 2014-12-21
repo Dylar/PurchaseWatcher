@@ -37,31 +37,32 @@ public final class R {
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
-        public static final int action_settings=0x7f090010;
-        public static final int action_view_filter=0x7f090012;
-        public static final int action_view_menu=0x7f090011;
-        public static final int brandNameSpinner=0x7f090008;
-        public static final int btn1=0x7f090013;
-        public static final int btn2=0x7f090014;
-        public static final int btn3=0x7f090015;
+        public static final int action_settings=0x7f090011;
+        public static final int action_view_filter=0x7f090013;
+        public static final int action_view_menu=0x7f090012;
+        public static final int brandNameSpinner=0x7f090009;
+        public static final int btn1=0x7f090014;
+        public static final int btn2=0x7f090015;
+        public static final int btn3=0x7f090016;
         public static final int container=0x7f090001;
-        public static final int costEditText=0x7f09000a;
-        public static final int create_purchase=0x7f090018;
-        public static final int create_thingy=0x7f090016;
+        public static final int costEditText=0x7f09000b;
+        public static final int create_purchase=0x7f090019;
+        public static final int create_thingy=0x7f090017;
         public static final int date=0x7f090006;
-        public static final int delete_purchase=0x7f090017;
+        public static final int delete_purchase=0x7f090018;
         public static final int drawer_layout=0x7f090000;
         public static final int edittext=0x7f090003;
+        public static final int listview_thingys=0x7f090008;
         public static final int navigation_drawer=0x7f090002;
         public static final int okBtn=0x7f090004;
-        public static final int okButton=0x7f09000d;
-        public static final int productNameEditText=0x7f090009;
-        public static final int rankSpinner=0x7f09000c;
+        public static final int okButton=0x7f09000e;
+        public static final int productNameEditText=0x7f09000a;
+        public static final int rankSpinner=0x7f09000d;
         public static final int section_label=0x7f090005;
         public static final int show_thingy_btn=0x7f090007;
-        public static final int spinner=0x7f09000e;
-        public static final int text=0x7f09000f;
-        public static final int typeSpinner=0x7f09000b;
+        public static final int spinner=0x7f09000f;
+        public static final int text=0x7f090010;
+        public static final int typeSpinner=0x7f09000c;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -89,9 +90,14 @@ public final class R {
         public static final int navigation_drawer_open=0x7f050004;
         public static final int thingyRank=0x7f05000a;
         public static final int thingyType=0x7f050009;
+        public static final int title_calendar=0x7f05000b;
+        public static final int title_editor=0x7f05000c;
+        public static final int title_overview=0x7f05000f;
+        public static final int title_purchases=0x7f05000e;
         public static final int title_section1=0x7f050001;
         public static final int title_section2=0x7f050002;
         public static final int title_section3=0x7f050003;
+        public static final int title_thingys=0x7f05000d;
     }
     public static final class style {
         /** 

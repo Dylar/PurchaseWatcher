@@ -1,5 +1,6 @@
 package de.lbl.purchasewatcher.model;
 
+import de.lbl.purchasewatcher.R;
 import de.lbl.purchasewatcher.system.*;
 import android.content.*;
 

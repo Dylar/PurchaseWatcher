@@ -1,6 +1,7 @@
 package de.lbl.purchasewatcher.model;
 
 import android.content.*;
+import de.lbl.purchasewatcher.R;
 import de.lbl.purchasewatcher.system.*;
 
 public class Thingy implements Storeable
@@ -18,13 +19,16 @@ public class Thingy implements Storeable
 	
 	public static final String SQL_CREATE = "CREATE TABLE "
 	+ TABLE
-	+ " (" + VAR_ID +" INTEGER PRIMARY KEY AUTOINCREMENT, "
+	+ " (" + VAR_DATABASE_ID +" INTEGER PRIMARY KEY AUTOINCREMENT, "
 	+ VAR_COST + " INTEGER default null,"
 	+ VAR_PURCHASE_ID + " INTEGER default null,"
 	+ VAR_PRODUCTNAME+ " TEXT default null,"
 	+ VAR_BRANDNAME+" TEXT default null,"
 	+ VAR_RANK+" TEXT default null,"
 	+ VAR_TYPE+" TEXT default null);";
+
+	public static final StoreableFactory<Thingy>	FACTORY_THINGY	= new ThingyFactory();
+
 	
 	public int id;
 	public int purchase_id;
@@ -75,6 +79,11 @@ public class Thingy implements Storeable
 		cvs.put(VAR_PURCHASE_ID,purchase_id);
 		
 		return cvs;
+	}
+
+	public void setPurchaseId(int id)
+	{
+		purchase_id = id;
 	}
 
 }

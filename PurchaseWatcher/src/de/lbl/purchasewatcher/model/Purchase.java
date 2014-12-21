@@ -1,6 +1,8 @@
 package de.lbl.purchasewatcher.model;
 import android.content.*;
+import de.lbl.purchasewatcher.R;
 import de.lbl.purchasewatcher.system.*;
+
 import java.util.*;
 import org.json.*;
 
@@ -8,7 +10,7 @@ public class Purchase implements Storeable
 {
 	public static final String TABLE = "purchases";
 
-	//public static final String VAR_ID = "id";
+	public static final String VAR_ID = "id";
 	public static final String VAR_DATE = "date";
 	public static final String VAR_THINGYS = "thingys";
 
@@ -17,6 +19,8 @@ public class Purchase implements Storeable
 	+ " (" + VAR_ID +" INTEGER PRIMARY KEY AUTOINCREMENT, "
 	+ VAR_DATE+ " LONG default null,"
 	+ VAR_THINGYS+" TEXT default null);";
+
+	public static final StoreableFactory<Purchase>	FACTORY_PURCHASE	= new PurchaseFactory();
 
 	public int id = -1;
 	public Calendar date;

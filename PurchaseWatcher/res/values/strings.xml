@@ -30,6 +30,11 @@
         <item>Normal</item>
         <item>Luxury</item>
     </string-array>
+        <string name="title_calendar">Calendar</string>
+        <string name="title_editor">Editor</string>
+        <string name="title_thingys">Thingys</string>
+        <string name="title_purchases">Purchases</string>
+        <string name="title_overview">Dashboard</string>
 
 	
 	

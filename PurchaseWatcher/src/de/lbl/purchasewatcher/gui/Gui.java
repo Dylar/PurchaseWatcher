@@ -1,10 +1,11 @@
 package de.lbl.purchasewatcher.gui;
 
 import android.os.*;
+import de.lbl.purchasewatcher.R;
 
 public interface Gui
 {
-	public void displayView(Bundle data);
+	public void openView(Bundle data);
 	
 	public void onDrawerOpened();
 	public void openDrawer();

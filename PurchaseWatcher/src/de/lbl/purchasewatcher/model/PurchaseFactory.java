@@ -1,62 +1,59 @@
 package de.lbl.purchasewatcher.model;
 
-import android.database.*;
-import de.lbl.purchasewatcher.system.*;
-import java.util.*;
-import org.json.*;
-import java.text.*;
-import android.util.*;
+import java.util.Calendar;
+import java.util.Date;
 
-public class PurchaseFactory<T extends Storeable> implements StoreableFactory
+import org.json.JSONObject;
+
+import android.database.Cursor;
+import de.lbl.purchasewatcher.system.StoreableFactory;
+
+public class PurchaseFactory implements StoreableFactory<Purchase>
 {
 
 	@Override
-	public T createFromDatabase(Cursor c) {
+	public Purchase createFromDatabase(Cursor c)
+	{
 		Purchase p = new Purchase();
 		p.setDatabaseId(c.getInt(c.getColumnIndex(Purchase.VAR_ID)));
-		
-		//p.date = TODO
-		
+
+		// p.date = TODO
+
 		try
 		{
 			long d = c.getLong(c.getColumnIndex(Purchase.VAR_DATE));
 			p.date = Calendar.getInstance();
 			p.date.setTime(new Date(d));
-			//JSONObject ja = new JSONObject(c.getString(c.getColumnIndex(Purchase.VAR_THINGYS)));
-			//Log.i("PurchaseFactory", ja.toString());
+			// JSONObject ja = new
+			// JSONObject(c.getString(c.getColumnIndex(Purchase.VAR_THINGYS)));
+			// Log.i("PurchaseFactory", ja.toString());
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
 		}
 
-		return (T) p;
+		return p;
+	}
+	
+	@Override
+	public Purchase reloadFromDatabase(Purchase p)
+	{
+		return DataManager.manager.getPurchaseById(p.getDatabaseId());
 	}
 
+
 	@Override
-	public T createFromJsonObject(JSONObject json) {
-		
-		Thingy t = new Thingy();
-		try {
-
-			t.id =json.getInt(Thingy.VAR_ID);
-			t.brandname = json.getString(Thingy.VAR_BRANDNAME);
-			t.cost =json.getInt(Thingy.VAR_COST);
-			t.type = json.getString(Thingy.VAR_TYPE);
-			t.rank = json.getString(Thingy.VAR_RANK);
-			t.purchase_id = json.getInt(Thingy.VAR_PURCHASE_ID);
-			t.productname = json.getString(Thingy.VAR_PRODUCTNAME);
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
-		return (T) t;
+	public Purchase createFromJsonObject(JSONObject json)
+	{
+		return null;
 	}
 
-	@Override
-	public String getDatabaseTableName() {
 
+	@Override
+	public String getDatabaseTableName()
+	{
 		return Purchase.TABLE;
 	}
+
 }

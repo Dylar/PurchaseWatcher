@@ -7,15 +7,25 @@ import de.lbl.purchasewatcher.*;
 
 public abstract class MainViewFragment extends Fragment
 {
-	public Gui gui;
-	public String name = Constants.VIEW_START;
+	
+	public static final String VIEWNAME_PURCHASE_DETAILS = "view_purchase_detail";
+	public static final String VIEWNAME_PURCHASE_OVERVIEW = "view_purchase_overview";
+	public static final String VIEWNAME_THINGY_DETAIL = "view_thingy_detail";
+	public static final String VIEWNAME_THINGY_OVERVIEW = "view_thingy_overview";
+	public static final String VIEWNAME_CALENDAR = "view_calendar";
+	public static final String VIEWNAME_EDITOR = "view_editor";
+	public static final String VIEWNAME_STATISTIC = "view_statistic";
+	public static final String VIEWNAME_OVERVIEW = "view_overview";
+
+	public static final String KEY_VIEW_TITLE = "key_view_title";
+	
+	public String name = VIEWNAME_OVERVIEW;
 	public String title = "You forgot something - dunno wat";
-	public String mode = Constants.MODE_OVERVIEW;
 	
 	public abstract void setUpFragment(Bundle data);
-	public abstract void handleActionbarClick(MenuItem item);
 	public abstract void updateView();
-	public abstract void changeMode(Bundle data);
+	public abstract void releaseFragment();
+	public abstract void handleActionbarClick(MenuItem item);
 	
 	public int getViewMenuLayoutId(){
 		return R.menu.view_btns;
@@ -29,10 +39,6 @@ public abstract class MainViewFragment extends Fragment
 		return name;
 	}
 	
-	public String getMode(){
-		return mode;
-	}
-	
 	public void setTitle(String title){
 		this.title = title;
 	}
@@ -41,14 +47,10 @@ public abstract class MainViewFragment extends Fragment
 		this.name = name;
 	}
 	
-	public void setMode(String mode){
-		this.mode = mode;
-	}
-	
 	@Override
 	public void onDetach()
 	{
-		gui = null;
+		releaseFragment();
 		super.onDetach();
 	}
 	
@@ -57,21 +59,17 @@ public abstract class MainViewFragment extends Fragment
 	{
 		super.onAttach(activity);
 		if(activity instanceof Gui){
-			gui = (Gui) activity;
+			GuiManager.manager.setActivity((Gui) activity);
 
 			Bundle data = getArguments();
 			
-			String mode = data.getString(Constants.KEY_VIEW_MODE);
-			setTitle(mode);
-			setName(data.getString(Constants.KEY_VIEW_NAME));
-			setMode(mode);
+			title = data.getString(KEY_VIEW_TITLE);
+			setTitle(title);
 			
 			setUpFragment(data);
-			data.putString(Constants.KEY_VIEW_TITLE,getViewTitle());
-			gui.onSectionAttached(data);
+			GuiManager.manager.onFragmentAttached(data);
 		}
 		else
 			throw new ClassCastException("Activity must implement Gui.");
-		
 	}
 }

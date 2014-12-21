@@ -1,6 +1,7 @@
 package de.lbl.purchasewatcher.system;
 
 import android.content.ContentValues;
+import de.lbl.purchasewatcher.R;
 
 /**
  * Interface for resources that can be stored inside the {@link Database}.
@@ -9,7 +10,8 @@ import android.content.ContentValues;
 public interface Storeable
 {
 
-	public static final String VAR_ID = "id";
+	public static final String VAR_DATABASE_ID = "id";
+	
 	/**
 	 * Returns the resource's id within the internal databse.
 	 *
