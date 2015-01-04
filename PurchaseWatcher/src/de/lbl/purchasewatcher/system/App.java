@@ -28,12 +28,12 @@ public class App extends Application
 	@Override
 	public void onCreate()
 	{
-		ctx = getApplicationContext();
+		//ctx = getApplicationContext();
 		GuiManager.manager = new GuiManager();
-		DataManager.manager = new DataManager();
-		ThingyManager.manager = new ThingyManager();
-		PurchaseManager.manager = new PurchaseManager();
-		super.onCreate();
+		//DataManager.manager = new DataManager();
+		//ThingyManager.manager = new ThingyManager();
+		//PurchaseManager.manager = new PurchaseManager();
+		//super.onCreate();
 	}
 
 	public static <T extends View> T findView(View v, int... id)
